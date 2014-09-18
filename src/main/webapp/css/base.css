@@ -1,36 +1,46 @@
 @CHARSET "UTF-8";
 /* per evitare di avere bordi o distanze indesiderate */
-*{margin: 0;padding:0}
+*{margin: 0;padding:0; font-family: arial;}
 body{
   /* stacco un po' il blocco dalla testa */	
   margin-top: 30px;
-  background-color: aqua;	
+  background-color: gray;	
+  color: white;
 }					
 .header{
 	height: 130px;
+	width: 100%;
 	background-color: fuchsia;
 }
+
+div > img {
+  height : auto;
+  width: 100%;
+  max-height: 100%;
+}	
 .body{
 	float: left;
-}
-.innerbody{
-	width: 300px;
-	height: auto;
-	margin: 5px;
-	background-color: blue; 
 }
 .content{
 	margin: 5px 0;
 	float: left;
 	width: 100%;
 	/* creare un'immagine larga come la prima colonna, adesso non si vede niente */
-	background: aqua url(../img/bg.gif) left top repeat-y;
+	background: #333366 url(../img/bg.gif) left top repeat-y;
 	color: #000;
+}
+a {
+  color: white;
 }
 .footer{
 	height: 40px;
-	background-color: red;
+	line-height: 40px;
 	clear: both;
+	text-align: center;
+	color: white;
+	background-color: #330099;
+	font-weight: bold;
+	font-size: small;
 }
 .container{
 	width: 70%;
