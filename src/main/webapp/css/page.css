@@ -1,0 +1,126 @@
+/* Elementi di base */
+html {min-height: 100%;}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #d9e9ea;
+	color: #666;
+	font: normal 62.5% Tahoma,sans-serif;
+}
+
+.clearer {clear: both;}
+
+.left {float: left;}
+
+.right {float: right;}
+
+/* Elementi della gabbia strutturale */
+.container {
+	background: #FFF;
+	font-size: 1.2em;
+	margin: 0 auto;
+	padding: 0 10px 4px;
+	width: 780px;
+}
+
+/* Elemento che incorpora l'intestazione e serve per distanziare  
+   la gabbia strutturale dal bordo superiore della finestra */
+.top {
+	padding: 0 10px 0;
+}
+
+/* Intestazione
+   L'intestazione e' composta da 1 riga di una sola colonna ma divisa in 2 sezioni: title e topnav */
+.header {
+	background: #FFF;
+	font-size: 1.2em;
+	height: 70px;
+	margin: 0 auto;
+	padding: 10px 10px 5px;
+	width: 780px;
+}
+
+.header .row_top {
+	background: #FFF;
+	color: #636466;
+	height: 70px;	
+}
+
+.header .row_top h1 {
+	font: normal 2.8em "Trebuchet MS",sans-serif;
+	line-height: 70px;
+	text-align: left;	
+	padding: 0 16px;
+}
+
+/* Corpo Principale */
+.main {
+	border-top: 4px solid #FFF;
+	background: url(img/bgmain.gif) repeat-y;
+	
+}
+/* Contenuti - Colonna a sinistra della pagina */
+.content {
+	float: right;
+	margin: 10px 0;
+	padding: 0 16px;
+	width: 531px;
+}
+.content .descr {
+	color: #664;
+	font-size: 0.9em;
+	margin-bottom: 6px;
+}
+.content li {
+	list-style: circle;
+	line-height: 1.3em;
+	margin-left: 18px;
+}
+
+.content h3 {
+	font: normal 1.8em Tahoma,sans-serif;
+	margin-bottom: 4px;
+}
+
+.content p {font-family: "Lucida Sans Unicode",sans-serif;}
+
+.content .box {
+	background: #FFF;
+	border: 1px solid #EEE;
+	border-left: 6px solid #C1CAD3;
+	color: #666;
+	display: block;
+	font: normal 1em Tahoma,sans-serif;
+	line-height: 1.6em;
+	margin-bottom: 12px;
+	padding: 8px 10px;
+	white-space: pre;
+}
+
+/* Elemento che incorpora l'intestazione e serve per distanziare  
+   la gabbia strutturale dal bordo superiore della finestra */
+.bottom {
+	padding: 0 10px 50px;
+}
+
+/* Pie' di Pagina, chiusura pagina */
+.footer {
+	margin: 0 auto;
+	padding: 10px 10px 5px;
+	width: 760px;
+	border-right: 10px solid #FFF;
+	border-bottom: 10px solid #FFF;
+	border-left: 10px solid #FFF;
+	background: #2A6062 url('../img/bgbottom.gif') no-repeat;
+	font-family: "Lucida Sans Unicode",sans-serif;
+	color: #FFF;
+	font-size: 1.1em;
+	font-weight: bold;
+	line-height: 35px;
+	text-align: center;
+}
+.footer a,.footer a:hover {color: #FFF;}

@@ -1,0 +1,43 @@
+/* Please Keep this font import at the very top of any CSS file */
+@charset "UTF-8";
+/* Starter CSS for Flyout Menu */
+#menu {
+	text-align: center;
+	padding: 0;
+	margin: 0;
+	border: 0;
+}
+
+/* viene tolto lo stile e i margini della lista */
+#menu ul, #menu ul li, #menu ul ul {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+#menu a {
+	/* quando un link è definito a livello di blocco l'area cliccabile
+	si espande a coprire l'intero blocco formato dal link */
+	display: block;
+	/* toglie la formattazione classica dei link */
+	text-decoration: none;
+	/* aggiungo bordi al blocco */	
+	border: 2px solid #999;
+	/* spazio leggermente in alto e in basso */
+	margin: 1px 0;
+	height: 20px;
+}
+/* effetto rollover */
+#menu a:LINK,
+#menu a:VISITED  {
+	background: #EEE;
+	color: #009;
+}
+/* effetto rollover */
+#menu a:HOVER,
+#menu a:FOCUS
+#menu a:ACTIVE  {
+	background: #666;
+	color: #FFF;
+	border-color: #000;
+}
