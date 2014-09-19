@@ -6,33 +6,42 @@ body{
   margin-top: 30px;
   background-color: gray;	
   color: white;
+}
+.container{
+	width: 900px;
+    /* serve per centrare il div */
+	margin: 0 auto;
 }					
-.header{
+.alto{
 	height: 130px;
 	width: 100%;
-	background-color: fuchsia;
 }
-
-div > img {
-  height : auto;
-  width: 100%;
-  max-height: 100%;
-}	
-.body{
-	float: left;
-}
-.content{
+.centro{
 	margin: 5px 0;
 	float: left;
 	width: 100%;
 	/* creare un'immagine larga come la prima colonna, adesso non si vede niente */
-	background: #333366 url(../img/bg.gif) left top repeat-y;
+	background: #006699 url(../img/bg.gif) left top repeat-y;
 	color: #000;
 }
-a {
-  color: white;
+.centro-sinistra{
+	display: table;
+	float: left;
+	width: 200px;
+	background: transparent;
 }
-.footer{
+.inner{
+	
+	color: white;
+	font-size: x-small; 
+	text-align: center;
+	padding: 5%;
+}	
+.centro-destra{
+	width: 700px;
+	float: left;
+}
+.basso{
 	height: 40px;
 	line-height: 40px;
 	clear: both;
@@ -42,13 +51,11 @@ a {
 	font-weight: bold;
 	font-size: small;
 }
-.container{
-	width: 70%;
-    /* serve per centrare il div */
-	margin: 0 auto;
+a {
+  color: white;
 }
-.menu{
-	float: left;
-	width: 200px;
-	background: transparent;
+div > img {
+  height : auto;
+  width: 100%;
+  max-height: 100%;
 }

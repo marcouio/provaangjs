@@ -27,11 +27,12 @@
 	/* spazio leggermente in alto e in basso */
 	margin: 1px 0;
 	height: 20px;
+	text-transform: uppercase;
 }
 /* effetto rollover */
 #menu a:LINK,
 #menu a:VISITED  {
-	background: #EEE;
+	background: #009999 ;
 	color: #009;
 }
 /* effetto rollover */
