@@ -1,10 +1,27 @@
-var app = angular.module('first', []);
+var app = angular.module('first', ['ngRoute']);
 app.controller('CtrlForm', function() {
 	this.utente = {};
 	this.addUser = function(utenti) {
 		utenti.push(this.utente);
 		this.utente = {};
 	};
+});
+
+function ViewController($scope) {
+}
+
+app.config(function($routeProvider) {
+	$routeProvider.when('/login', {
+		templateUrl : 'login.html',
+		controller : ViewController
+	});
+	$routeProvider.when('/photos/:id', {
+		templateUrl : 'photo-detail.html',
+		controller : ViewController
+	});
+	$routeProvider.otherwise({
+		redirectTo : '/login'
+	});
 });
 
 app.controller("CtrlUtenti", function() {

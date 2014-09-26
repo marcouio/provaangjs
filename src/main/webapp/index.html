@@ -3,13 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <title>Insert title here</title>
-<script
-	src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular.min.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.23/angular-route.js"></script>
 <script src="js/app.js"></script>
 <link rel="stylesheet" type="text/css" href="css/menu.css">
 <link href="css/base.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body ng-controller="ViewController">
 	<div class="container">
 		<div class="alto">
 			<img alt="header" src="/img/Header.jpg">
@@ -19,23 +19,8 @@
 				<menu></menu>
 			</div>
 			<div class="centro-destra">
-				<div class="inner">
-					<form>
-						<fieldset style="width: 40%; margin: auto 30%;">
-						 	<legend>Login</legend>
-							 	<table>
-								 	<tr>
-								 		<td>User: <input type="text" id="user"></td>
-								 	</tr>
-								 	<tr>
-								 		<td>Pass: <input type="text" id="pass"></td>
-								 	</tr>
-								 	
-							 	</table>
-						 
-							
-						</fieldset>
-					</form>
+				<div ng-view class="inner">
+					
 				</div>
 			</div>
 		</div> 
