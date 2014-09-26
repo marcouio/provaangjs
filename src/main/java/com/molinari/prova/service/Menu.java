@@ -36,17 +36,19 @@ public class Menu {
 	public void setHasSub(final boolean hasSub) {
     	this.hasSub = hasSub;
     }
-	public static Menu creaSingleMenu(){
+	public static Menu creaSingleMenu(String nome, String url){
 		Menu menu = new Menu();
-		menu.nome = "Menu";
-		menu.url = "index.html";
+		menu.nome = nome;
+		menu.url = url;
 		return menu; 
 	}
 	
 	public static ArrayList<Menu> creaMenu(){
 		ArrayList<Menu> menus = new ArrayList<Menu>();
-		for(int i = 0; i < 5; i++){
-			Menu menu = creaSingleMenu();
+		menus.add(creaSingleMenu("Login", "#/login"));
+		menus.add(creaSingleMenu("Register", "#/register"));
+		for(int i = 0; i < 2; i++){
+			Menu menu = creaSingleMenu("Menu","index.html");
 			menus.add(menu);
 		}
 		return menus;

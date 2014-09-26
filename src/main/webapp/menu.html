@@ -1,6 +1,6 @@
 <div ng-controller="MenuController" id="menu">
 	<ul>
-		<li ng-repeat="menu in menus" ng-class="{'has-sub' : menu.hasSub }"><a href="menu.url">{{menu.nome}}</a>
+		<li ng-repeat="menu in menus" ng-class="{'has-sub' : menu.hasSub }"><a href="{{menu.url}}">{{menu.nome}}</a>
 			<ul ng-show="menu.hasSub">
 				<li ng-repeat="sub in menu.submenus"><a href="sub.url">{{sub.nome}}</a>
 				</li>

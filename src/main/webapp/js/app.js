@@ -15,6 +15,10 @@ app.config(function($routeProvider) {
 		templateUrl : 'login.html',
 		controller : ViewController
 	});
+	$routeProvider.when('/register', {
+		templateUrl : 'register.html',
+		controller : ViewController
+	});
 	$routeProvider.when('/photos/:id', {
 		templateUrl : 'photo-detail.html',
 		controller : ViewController
