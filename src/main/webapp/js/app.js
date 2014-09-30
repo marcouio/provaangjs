@@ -1,4 +1,5 @@
 var app = angular.module('first', ['ngRoute']);
+
 app.controller('CtrlForm', function() {
 	this.utente = {};
 	this.addUser = function(utenti) {
@@ -60,9 +61,3 @@ app.directive('footer', function(){
 	};
 });
 
-app.directive('tagNew', function(){
-	return{
-		restrict: 'E',
-		templateUrl: 'tagNew.html'
-	};
-});

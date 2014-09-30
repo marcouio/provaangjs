@@ -7,7 +7,7 @@
 	src="//ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
 <link href="css/form.css" rel="stylesheet" type="text/css">
 </head>
-<body>
+<body ng-app="registra">
 <form>
 	<fieldset style="width: 40%; margin: auto 30%; text-align: center;">
 		<legend>Register</legend>
@@ -25,10 +25,21 @@
 				<td>Pass:</td><td><input type="text" id="pass"></td>
 			</tr>
 			<tr>
-				<td colspan="2"><button type="submit">Inserisci</button></td>
+				<td colspan="2"><button id="registra" type="submit">Inserisci</button></td>
 			</tr>
 		</table>
 	</fieldset>
 </form>
+<script>
+$('#registra').click(function(){
+	var chiamata = $http.get('/prova/rest/utente/registra');
+	chiamata.success(function(data){
+		$scope.menus = data;
+	});
+	chiamata.error(function(error){
+		alert(error);
+	});
+});
+</script>
 </body>
 </html>
