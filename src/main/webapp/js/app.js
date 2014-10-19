@@ -29,10 +29,6 @@ app.config(function($routeProvider) {
 	});
 });
 
-app.controller("CtrlUtenti", function() {
-	this.utenti = [];
-});
-
 app.controller("MenuController", function($http, $scope){
 	$scope.menus = [];
 	
@@ -43,7 +39,6 @@ app.controller("MenuController", function($http, $scope){
 	chiamata.error(function(error){
 		alert(error);
 	});
-	
 	
 });
 
