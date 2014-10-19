@@ -8,15 +8,17 @@
 <link href="css/form.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form ng-app="login">
+<form ng-controller="LoginController" ng-submit="login(credential)">
 	<fieldset style="width: 40%; margin: auto 30%; text-align: center;">
 		<legend>Login</legend>
 		<table class="tableform">
 			<tr>
-				<td>User:</td><td><input type="text" id="user"></td>
+				<td><label for="user">User:</label></td>
+				<td><input type="text" id="user" ng-model="credentials.username"></td>
 			</tr>
 			<tr>
-				<td>Pass:</td><td> <input type="text" id="pass"></td>
+				<td><label for="pass">Pass:</label></td>
+				<td> <input type="text" id="pass" ng-model="credentials.password"></td>
 			</tr>
 			<tr>
 				<td colspan="2"><button type="submit">Inserisci</button></td>
