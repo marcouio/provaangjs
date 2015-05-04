@@ -24,9 +24,9 @@ app.config(function($routeProvider) {
 		templateUrl : 'photo-detail.html',
 		controller : ViewController
 	});
-	$routeProvider.otherwise({
-		redirectTo : '/login'
-	});
+//	$routeProvider.otherwise({
+//		redirectTo : '/login'
+//	});
 });
 
 app.controller("MenuController", function($http, $scope){
@@ -53,6 +53,22 @@ app.directive('footer', function(){
 	return{
 		restrict: 'E',
 		templateUrl: 'footer.html'
+	};
+});
+
+app.controller('LoginController', function($scope, $rootScope, AUTH_EVENTS, AuthService) {
+	this.credentials = {
+		username : 'marco',
+		password : 'marco'
+	};
+	this.login = function(credentials) {
+		alert("Eccomi!");
+		AuthService.login(credentials).then(function(user) {
+			$rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
+			$scope.setCurrentUser(user);
+		}, function() {
+			$rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+		});
 	};
 });
 

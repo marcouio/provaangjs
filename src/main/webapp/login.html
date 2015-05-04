@@ -3,28 +3,28 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <title>Insert title here</title>
-<script
-	src="http://ajax.googleapis.com/ajax/libs/angularjs/1.0.2/angular.min.js"></script>
+	
 <link href="css/form.css" rel="stylesheet" type="text/css">
+
 </head>
 <body>
-<form ng-controller="LoginController" ng-submit="login(credential)">
-	<fieldset style="width: 40%; margin: auto 30%; text-align: center;">
-		<legend>Login</legend>
-		<table class="tableform">
-			<tr>
-				<td><label for="user">User:</label></td>
-				<td><input type="text" id="user" ng-model="credentials.username"></td>
-			</tr>
-			<tr>
-				<td><label for="pass">Pass:</label></td>
-				<td> <input type="text" id="pass" ng-model="credentials.password"></td>
-			</tr>
-			<tr>
-				<td colspan="2"><button type="submit">Inserisci</button></td>
-			</tr>
-		</table>
-	</fieldset>
-</form>
+	<form ng-controller="LoginController as logCtrl" ng-submit="logCtrl.login(credential);">
+		<fieldset style="width: 40%; margin: auto 30%; text-align: center;">
+			<legend>Login</legend>
+			<table class="tableform">
+				<tr>
+					<td><label for="user">User:</label></td>
+					<td><input type="text" id="user" ng-model="logCtrl.credentials.username"></td>
+				</tr>
+				<tr>
+					<td><label for="pass">Pass:</label></td>
+					<td> <input type="text" id="pass" ng-model="logCtrl.credentials.password"></td>
+				</tr>
+				<tr>
+					<td colspan="2"><input type="submit" ng-click="logCtrl.login(logCtrl.credentials);"></td>
+				</tr>
+			</table>
+		</fieldset>
+	</form>
 </body>
 </html>
