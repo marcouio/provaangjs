@@ -5,22 +5,22 @@
 <title>Insert title here</title>
 <link href="css/form.css" rel="stylesheet" type="text/css">
 </head>
-<body ng-app="registra">
-<form>
+<body>
+<form ng-controller="RegisterController as regCtrl" ng-submit="regCtrl.register(regCtrl.credentials);">
 	<fieldset style="width: 40%; margin: auto 30%; text-align: center;">
 		<legend>Register</legend>
 		<table class="tableform">
 			<tr>
-				<td>Name:</td><td><input type="text" id="name"></td>
+				<td>Name:</td><td><input type="text" id="regCtrl.credentials.name"></td>
 			</tr>
 			<tr>
-				<td>Surname:</td><td><input type="text" id="surname"></td>
+				<td>Surname:</td><td><input type="text" id="regCtrl.credentials.surname"></td>
 			</tr>
 			<tr>
-				<td>User:</td><td><input type="text" id="user"></td>
+				<td>User:</td><td><input type="text" id="regCtrl.credentials.username"></td>
 			</tr>
 			<tr>
-				<td>Pass:</td><td><input type="text" id="pass"></td>
+				<td>Pass:</td><td><input type="text" id="regCtrl.credentials.password"></td>
 			</tr>
 			<tr>
 				<td colspan="2"><button id="registra" type="submit">Inserisci</button></td>

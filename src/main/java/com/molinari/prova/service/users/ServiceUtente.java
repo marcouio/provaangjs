@@ -13,7 +13,7 @@ public class ServiceUtente {
 	  @GET
 	  @Path("/registra")
 	  @Produces({MediaType.APPLICATION_JSON})
-	  public String registra(@QueryParam("firstname") String name, 
+	  public Utente registra(@QueryParam("firstname") String name, 
 	  						   @QueryParam("username") String uname, 
 	  						   @QueryParam("password") String pwd,
 	  						   @QueryParam("surname") String sname) {
@@ -22,6 +22,6 @@ public class ServiceUtente {
 		  utente.setPassword(pwd);
 		  utente.setSurname(sname);
 		  utente.setUsermame(uname);
-		  return "";
+		  return utente;
 	  }
 }

@@ -7,7 +7,6 @@ app.controller('CtrlForm', function() {
 		this.utente = {};
 	};
 });
-
 function ViewController($scope) {
 }
 
@@ -56,18 +55,41 @@ app.directive('footer', function(){
 	};
 });
 
-app.controller('LoginController', function($scope, $rootScope, AUTH_EVENTS, AuthService) {
+app.controller('LoginController', function($scope, $rootScope) {
 	this.credentials = {
 		username : 'marco',
 		password : 'marco'
 	};
 	this.login = function(credentials) {
 		alert("Eccomi!");
-		AuthService.login(credentials).then(function(user) {
-			$rootScope.$broadcast(AUTH_EVENTS.loginSuccess);
-			$scope.setCurrentUser(user);
-		}, function() {
-			$rootScope.$broadcast(AUTH_EVENTS.loginFailed);
+	};
+});
+
+app.controller('LoginController', function() {
+	this.credentials = {
+		username : '',
+		password : ''
+	};
+	this.login = function(credentials) {
+		alert("Eccomi!");
+	};
+});
+app.controller('RegisterController', function($http, $scope) {
+	this.credentials = {
+			name : '',
+			surname : '',
+			username : '',
+			password : '',
+			
+	};
+	this.register = function($http, $scope) {
+		alert("Eccomi!");
+		var chiamata = $http.get('/prova/rest/utente/registra');
+		chiamata.success(function(data){
+			$scope.utente = data;
+		});
+		chiamata.error(function(error){
+			alert(error);
 		});
 	};
 });

@@ -8,7 +8,7 @@
 
 </head>
 <body>
-	<form ng-controller="LoginController as logCtrl" ng-submit="logCtrl.login(credential);">
+	<form ng-controller="LoginController as logCtrl" ng-submit="logCtrl.login(logCtrl.credentials);">
 		<fieldset style="width: 40%; margin: auto 30%; text-align: center;">
 			<legend>Login</legend>
 			<table class="tableform">
@@ -21,7 +21,7 @@
 					<td> <input type="text" id="pass" ng-model="logCtrl.credentials.password"></td>
 				</tr>
 				<tr>
-					<td colspan="2"><input type="submit" ng-click="logCtrl.login(logCtrl.credentials);"></td>
+					<td colspan="2"><input type="submit"></td>
 				</tr>
 			</table>
 		</fieldset>
