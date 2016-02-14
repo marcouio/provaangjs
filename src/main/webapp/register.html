@@ -6,21 +6,21 @@
 <link href="css/form.css" rel="stylesheet" type="text/css">
 </head>
 <body>
-<form ng-controller="RegisterController as regCtrl" ng-submit="regCtrl.register(regCtrl.credentials);">
+<form id="register" method="get" ng-controller="RegisterController as regCtrl" ng-submit="regCtrl.register();">
 	<fieldset style="width: 40%; margin: auto 30%; text-align: center;">
 		<legend>Register</legend>
 		<table class="tableform">
 			<tr>
-				<td>Name:</td><td><input type="text" id="regCtrl.credentials.name"></td>
+				<td>Name:</td><td><input type="text" name="firstname" id="firstname" ></td>
 			</tr>
 			<tr>
-				<td>Surname:</td><td><input type="text" id="regCtrl.credentials.surname"></td>
+				<td>Surname:</td><td><input type="text" name="surname" id="surname"></td>
 			</tr>
 			<tr>
-				<td>User:</td><td><input type="text" id="regCtrl.credentials.username"></td>
+				<td>User:</td><td><input type="text" name="username" id="username" ></td>
 			</tr>
 			<tr>
-				<td>Pass:</td><td><input type="text" id="regCtrl.credentials.password"></td>
+				<td>Pass:</td><td><input type="text" name="password" id="password"></td>
 			</tr>
 			<tr>
 				<td colspan="2"><button id="registra" type="submit">Inserisci</button></td>
@@ -29,15 +29,6 @@
 	</fieldset>
 </form>
 <script>
-$('#registra').click(function(){
-	var chiamata = $http.get('/prova/rest/utente/registra');
-	chiamata.success(function(data){
-		$scope.menus = data;
-	});
-	chiamata.error(function(error){
-		alert(error);
-	});
-});
 </script>
 </body>
 </html>
