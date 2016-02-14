@@ -66,7 +66,7 @@ app.controller('LoginController', function($scope, $rootScope) {
 });
 
 app.controller('LoginController', function() {
-	this.credentials = {
+	this.utente = {
 		username : '',
 		password : ''
 	};
@@ -74,23 +74,25 @@ app.controller('LoginController', function() {
 		alert("Eccomi!");
 	};
 });
-app.controller('RegisterController', function($http, $scope) {
-	this.credentials = {
-			name : '',
+app.controller('RegisterController', ['$scope', '$http', function($scope, $http) {
+	$scope.utente = {
+			firstname : '',
 			surname : '',
 			username : '',
 			password : '',
 			
 	};
-	this.register = function($http, $scope) {
-		alert("Eccomi!");
-		var chiamata = $http.get('/prova/rest/utente/registra');
+	this.register = function() {
+		var urla = '/prova/rest/utente/registra?' + $('#register').serialize();
+		alert(urla);
+		var chiamata = $http.get(urla);
 		chiamata.success(function(data){
 			$scope.utente = data;
+			alert($scope.utente.firstname + " è stato registrato con successo");
 		});
 		chiamata.error(function(error){
 			alert(error);
 		});
 	};
-});
+}]);
 
